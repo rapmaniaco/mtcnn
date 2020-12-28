@@ -2,6 +2,24 @@
 
 <ul><li>https://stackoverflow.com/questions/63542803/no-module-named-tensorflow-keras-layers-experimental-preprocessing</li></ul>
 
+<p>Testando com outras versões de Keras</p>
+
+
+```
+$ pip install keras == 2.3.0
+```
+Primeiro teste funcionou com (https://stackoverflow.com/questions/57062456/function-call-stack-keras-scratch-graph-error)
+
+If you use Tensorflow-GPU, then add:
+
+physical_devices = tf.config.experimental.list_physical_devices('GPU')
+print("physical_devices-------------", len(physical_devices))
+tf.config.experimental.set_memory_growth(physical_devices[0], True)
+
+
+
+====================================
+
 <p>Com a versão 2.2.0 é executado pela CPU</p>
 
 <p>TensorFlow v2.3 requires CUDA 10.1 and cuDNN 7.6. Whereas, for TensorFlow 2.4 you'll need CUDA 11 with cuDNN 8.</p>
