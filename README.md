@@ -12,10 +12,11 @@ Primeiro teste funcionou com (https://stackoverflow.com/questions/57062456/funct
 
 If you use Tensorflow-GPU, then add:
 
+```
 physical_devices = tf.config.experimental.list_physical_devices('GPU')
 print("physical_devices-------------", len(physical_devices))
 tf.config.experimental.set_memory_growth(physical_devices[0], True)
-
+```
 
 
 ====================================
